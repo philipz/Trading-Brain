@@ -5,6 +5,12 @@ import seaborn as sns
 from scipy.stats import norm
 import os
 import pickle
+#Needed to get paths set up for import tbrn
+import os, sys
+curfilePath = os.path.abspath(__file__)
+curDir = os.path.abspath(os.path.join(curfilePath,os.pardir))
+parentDir = os.path.abspath(os.path.join(curDir,os.pardir))
+sys.path.insert(0,parentDir)
 from tbrn.trading_game import TradingGame
 
 def drawf(qs, glen, gpen, grew):
